@@ -2,8 +2,8 @@
 
 Team:
 
-* Dylan Winn - shoes
-* Person 2 - Which microservice?
+* Dylan Winn - Shoes
+* Kristen Lungstrum - Hats
 
 ## Design
 
