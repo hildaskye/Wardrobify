@@ -9,6 +9,9 @@ class BinVO(models.Model):
     bin_size = models.PositiveSmallIntegerField()
     import_href = models.CharField(max_length=150, unique=True)
 
+    def __str__(self):
+        return f"{self.closet_name} Bin {self.bin_number}"
+
 
 class Shoe(models.Model):
     manufacturer = models.CharField(max_length=100)
