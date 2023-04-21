@@ -17,6 +17,24 @@ function ShoesList() {
         fetchData();
     }, []);
 
+
+    const deleteShoe = async (id) => {
+
+        const deleteFunctionUrl = `http://localhost:8080/api/shoes/${id}/`
+        const options = {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json"
+            }
+
+        }
+        const response = await fetch(deleteFunctionUrl, options)
+        if (response.ok) {
+            setShoes(shoes.filter(shoe => shoe.id !== id));
+        }
+    }
+
+
     return (
         <table className="table table-striped">
         <thead>
@@ -26,6 +44,7 @@ function ShoesList() {
             <th>Color</th>
             <th>Picture</th>
             <th>Closet</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +56,11 @@ function ShoesList() {
               <td>{ shoe.color }</td>
               <td><img src={shoe.picture_url} alt="unavailable" width="100" height="100" /></td>
               <td>{ shoe.shoe_bin.closet_name }</td>
+              <td>
+                <button type="button" className="btn btn-danger"
+                onClick={() => deleteShoe(shoe.id)}
+                >Delete</button>
+              </td>
             </tr>
           );
         })}
