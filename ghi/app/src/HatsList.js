@@ -56,7 +56,7 @@ function HatsList() {
               <td>{ hat.style_name } </td>
               <td>{ hat.fabric }</td>
               <td>{ hat.color }</td>
-              <td>{ hat.location.section_number }</td>
+              <td>{ hat.location.closet_name }</td>
               <td>
                 <button type="button" className="btn btn-danger"
                 onClick={() => deleteHat(hat.id)}
