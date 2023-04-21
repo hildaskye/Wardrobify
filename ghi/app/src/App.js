@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
 import HatsList from './HatsList';
+import HatForm from './HatForm';
 
 function App(props) {
-  console.log(props)
   return (
     <BrowserRouter>
       <Nav />
@@ -13,6 +13,7 @@ function App(props) {
           <Route path="/" element={<MainPage />} />
           <Route path="hats">
             <Route path="" element={<HatsList />} />
+            <Route path="new" element={<HatForm />} />
           </Route>
         </Routes>
       </div>
