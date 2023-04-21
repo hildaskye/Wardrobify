@@ -24,6 +24,7 @@ function ShoesList() {
             <th>Manufacturer</th>
             <th>Model Name</th>
             <th>Color</th>
+            <th>Picture</th>
             <th>Closet</th>
           </tr>
         </thead>
@@ -34,7 +35,7 @@ function ShoesList() {
               <td>{ shoe.manufacturer } </td>
               <td>{ shoe.model_name }</td>
               <td>{ shoe.color }</td>
-              {console.log(shoe)}
+              <img src={shoe.picture_url} alt="unavailable" width="100" height="100" />
               <td>{ shoe.shoe_bin.closet_name }</td>
             </tr>
           );

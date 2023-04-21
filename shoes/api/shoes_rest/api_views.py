@@ -31,6 +31,7 @@ class ShoeListEncoder(ModelEncoder):
         "color",
         "id",
         "shoe_bin",
+        "picture_url",
     ]
     encoders = {"shoe_bin": BinVOListEncoder()}
 
