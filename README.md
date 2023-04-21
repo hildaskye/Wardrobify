@@ -9,8 +9,7 @@ Team:
 
 ## Shoes microservice
 
-Explain your models and integration with the wardrobe
-microservice, here.
+For the Shoes Microservices I made a BinVO and a Shoes model which used the BinVO as a ForeignKey. BinVO is being polled once every minute. The API can create shoes and view a list of all shoes at http://localhost:8080/api/shoes/ and can get the information for an individual shoe or delete it at http://localhost:8080/api/shoes/<id>. Finally, I added React functionality by creating a form, making a list page (with delete functionality), confirming all was working, and making nav links.
 
 ## Hats microservice
 
